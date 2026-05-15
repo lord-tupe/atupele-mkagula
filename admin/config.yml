@@ -1,0 +1,92 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "site"
+    label: "Site Content"
+    files:
+      - label: "Portfolio Content"
+        name: "content"
+        file: "_data/content.yml"
+        fields:
+          - label: "Hero Section"
+            name: hero
+            widget: object
+            fields:
+              - {label: "Label Text", name: label, widget: string}
+              - {label: "Title Before Highlight", name: title_pre, widget: string}
+              - {label: "Title Highlight", name: title_highlight, widget: string}
+              - {label: "Subtitle", name: subtitle, widget: text}
+              - {label: "Stats", name: stats, widget: list, fields: [{label: "Number", name: number, widget: string}, {label: "Label", name: label, widget: string}]}
+          - label: "About Section"
+            name: about
+            widget: object
+            fields:
+              - {label: "Intro Text", name: intro, widget: markdown}
+              - {label: "Tags", name: tags, widget: list, field: {label: "Tag", name: tag, widget: string}}
+              - {label: "Terminal Lines", name: terminal, widget: list, field: {label: "Line", name: line, widget: string}}
+              - {label: "Stats", name: stats, widget: list, fields: [{label: "Number", name: number, widget: string}, {label: "Label", name: label, widget: string}]}
+          - label: "Experience"
+            name: experience
+            widget: list
+            fields:
+              - {label: "Company", name: company, widget: string}
+              - {label: "Role", name: role, widget: string}
+              - {label: "Period", name: period, widget: string}
+              - {label: "Description", name: description, widget: text}
+              - {label: "Highlights", name: highlights, widget: list, field: {label: "Highlight", name: highlight, widget: string}}
+          - label: "Skills"
+            name: skills
+            widget: list
+            fields:
+              - {label: "Title", name: title, widget: string}
+              - {label: "Icon HTML Class", name: icon, widget: string}
+              - {label: "Description", name: description, widget: text}
+              - {label: "Tags", name: tags, widget: list, field: {label: "Tag", name: tag, widget: string}}
+          - label: "Education"
+            name: education
+            widget: list
+            fields:
+              - {label: "School", name: school, widget: string}
+              - {label: "Degree", name: degree, widget: string}
+              - {label: "Year", name: year, widget: string}
+              - {label: "Description", name: description, widget: text}
+          - label: "Achievements"
+            name: achievements
+            widget: list
+            fields:
+              - {label: "Title", name: title, widget: string}
+              - {label: "Icon", name: icon, widget: string}
+              - {label: "Description", name: description, widget: text}
+          - label: "Projects"
+            name: projects
+            widget: list
+            fields:
+              - {label: "Label", name: label, widget: string}
+              - {label: "Title", name: title, widget: string}
+              - {label: "Description", name: description, widget: text}
+              - {label: "Image", name: image, widget: image}
+          - label: "Music"
+            name: music
+            widget: object
+            fields:
+              - {label: "Description", name: description, widget: text}
+          - label: "Thoughts"
+            name: thoughts
+            widget: list
+            fields:
+              - {label: "Date", name: date, widget: string}
+              - {label: "Title", name: title, widget: string}
+              - {label: "Excerpt", name: excerpt, widget: text}
+          - label: "Contact"
+            name: contact
+            widget: object
+            fields:
+              - {label: "Description", name: description, widget: text}
+              - {label: "LinkedIn URL", name: linkedin, widget: string}
+              - {label: "GitHub URL", name: github, widget: string}
+              - {label: "Twitter URL", name: twitter, widget: string}

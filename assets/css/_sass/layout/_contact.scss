@@ -1,0 +1,14 @@
+.contact-inner { max-width: 800px; margin: 0 auto; text-align: center; }
+.contact-form { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; text-align: left; margin-top: 3rem; }
+.contact-form .full-width { grid-column: 1 / -1; }
+.form-group label { display: block; font-size: 0.8rem; font-weight: 500; color: var(--text-secondary); margin-bottom: 0.5rem; letter-spacing: 0.03em; }
+.form-group input, .form-group textarea { width: 100%; padding: 0.85rem 1rem; background: var(--surface); border: 1px solid var(--border-light); border-radius: 10px; color: var(--text-primary); font-family: var(--font-body); font-size: 0.9rem; transition: all 0.3s; outline: none; }
+.form-group input:focus, .form-group textarea:focus { border-color: rgba(79,195,247,0.4); background: rgba(255,255,255,0.06); box-shadow: 0 0 0 3px rgba(79,195,247,0.1); }
+.form-group textarea { min-height: 140px; resize: vertical; }
+.form-submit { grid-column: 1 / -1; display: flex; justify-content: center; margin-top: 0.5rem; }
+.contact-links { display: flex; justify-content: center; gap: 2rem; margin-top: 3rem; flex-wrap: wrap; }
+.contact-link { display: flex; align-items: center; gap: 0.5rem; color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: color 0.3s; cursor: none; }
+.contact-link:hover { color: var(--text-primary); }
+.contact-icons { display: flex; justify-content: center; gap: 1rem; margin-bottom: 2rem; }
+.contact-icon-btn { width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--card-glass); border: 1px solid var(--border-light); color: var(--brand-light); font-size: 1.2rem; transition: all 0.3s var(--spring); cursor: none; text-decoration: none; }
+.contact-icon-btn:hover { transform: translateY(-4px) scale(1.08); border-color: var(--brand-light); box-shadow: 0 8px 24px rgba(79,195,247,0.2); }

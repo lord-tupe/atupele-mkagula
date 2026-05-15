@@ -1,0 +1,2 @@
+.music-visualizer { display: flex; align-items: flex-end; justify-content: center; gap: 3px; height: 60px; margin-top: 2rem; padding: 2rem; background: var(--surface); border: 1px solid var(--border-light); border-radius: 16px; }
+.viz-bar { width: 4px; background: linear-gradient(to top, var(--brand-purple), var(--brand-light)); border-radius: 2px; animation: viz-bounce 1s ease-in-out infinite; }

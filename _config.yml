@@ -1,0 +1,8 @@
+title: Atupele Nathan Mkagula
+description: Cybersecurity & IT Consultant Portfolio
+baseurl: ""
+url: ""
+markdown: kramdown
+sass:
+  sass_dir: assets/css/_sass
+  style: compressed

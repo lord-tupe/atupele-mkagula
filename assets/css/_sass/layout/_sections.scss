@@ -1,0 +1,73 @@
+.hero-section { position: relative; min-height: 100vh; min-height: calc(var(--vh, 1vh) * 100); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; z-index: 0; }
+.hero-bg-image { position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform 8s ease-out; }
+.hero-section:hover .hero-bg-image { transform: scale(1.03); }
+.hero-bg-overlay { position: absolute; inset: 0; z-index: 1; background: radial-gradient(ellipse at 30% 50%, rgba(0,50,80,0.4) 0%, transparent 60%), radial-gradient(ellipse at 70% 30%, rgba(0,30,60,0.3) 0%, transparent 50%), linear-gradient(to bottom, rgba(10,10,15,0.3), rgba(10,10,15,0.8)); }
+.light-mode .hero-bg-overlay { background: radial-gradient(ellipse at 30% 50%, rgba(30,144,255,0.15) 0%, transparent 60%), radial-gradient(ellipse at 70% 30%, rgba(30,144,255,0.1) 0%, transparent 50%), linear-gradient(to bottom, rgba(250,250,250,0.5), rgba(250,250,250,0.85)); }
+.hero-canvas { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+.hero-content { position: relative; z-index: 10; text-align: center; max-width: 900px; padding: 2rem; }
+.hero-label { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 1rem; border-radius: 100px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1.5rem; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); background: rgba(79,195,247,0.1); border: 1px solid rgba(79,195,247,0.2); color: var(--brand-light); }
+.hero-title { font-family: var(--font-display); font-weight: 700; font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.08; letter-spacing: -0.03em; margin-bottom: 1.5rem; }
+.hero-title .highlight { background: linear-gradient(135deg, var(--brand-blue), var(--brand-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.hero-subtitle { font-size: clamp(1rem, 2vw, 1.2rem); color: var(--text-secondary); line-height: 1.7; max-width: 650px; margin: 0 auto 2.5rem; font-weight: 400; }
+.hero-cta-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.scroll-indicator { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); z-index: 10; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; color: var(--text-secondary); font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.scroll-indicator .scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, var(--text-secondary), transparent); animation: scroll-pulse 2s ease-in-out infinite; }
+.section { padding: 6rem 2rem; position: relative; }
+.section-inner { max-width: 1200px; margin: 0 auto; }
+.section-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--brand-light); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; }
+.section-label::before { content: ''; width: 24px; height: 1px; background: var(--brand-light); }
+.section-title { font-family: var(--font-display); font-weight: 700; font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 1.5rem; }
+.section-description { font-size: 1.05rem; color: var(--text-secondary); line-height: 1.75; max-width: 700px; }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-top: 3rem; }
+.about-portrait { position: relative; aspect-ratio: 4/5; border-radius: 20px; overflow: hidden; background: var(--surface); border: 1px solid var(--border-light); }
+.about-portrait img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--card-ease); }
+.about-portrait:hover img { transform: scale(1.05); }
+.about-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
+.stat-item { text-align: center; padding: 1.25rem; background: var(--surface); border: 1px solid var(--border-light); border-radius: 12px; transition: all 0.3s; }
+.stat-item:hover { border-color: rgba(255,255,255,0.15); background: rgba(255,255,255,0.06); }
+.light-mode .stat-item:hover { border-color: var(--brand-blue); }
+.stat-number { font-family: var(--font-display); font-size: 2rem; font-weight: 700; color: var(--brand-light); line-height: 1; margin-bottom: 0.4rem; }
+.stat-label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 500; }
+.about-text p { margin-bottom: 1.25rem; color: var(--text-secondary); line-height: 1.8; }
+.about-text p strong { color: var(--text-primary); font-weight: 600; }
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+.experience-card { padding: 2rem; }
+.experience-card .exp-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem; }
+.experience-card h3 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; }
+.experience-card .exp-company { color: var(--brand-light); font-weight: 600; font-size: 0.95rem; }
+.experience-card .exp-date { color: var(--text-muted); font-size: 0.85rem; }
+.experience-card ul { list-style: none; margin-top: 1rem; }
+.experience-card ul li { display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 0.5rem; }
+.experience-card ul li i { color: var(--brand-light); margin-top: 4px; font-size: 0.75rem; flex-shrink: 0; }
+.edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+.edu-card { padding: 2rem; }
+.edu-card .edu-icon { font-size: 2rem; margin-bottom: 1rem; }
+.edu-card h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; margin-bottom: 0.25rem; }
+.edu-card .edu-school { color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 0.5rem; }
+.edu-card .edu-degree { font-weight: 600; font-size: 0.9rem; margin-bottom: 0.25rem; }
+.edu-card .edu-year { color: var(--text-muted); font-size: 0.8rem; }
+.achieve-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+.achieve-card { padding: 2rem; background: linear-gradient(135deg, rgba(30,144,255,0.08), rgba(79,195,247,0.03)); border: 1px solid rgba(79,195,247,0.12); }
+.achieve-card:hover { border-color: rgba(79,195,247,0.3); }
+.achieve-card .achieve-icon { font-size: 2rem; margin-bottom: 1rem; }
+.achieve-card h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; margin-bottom: 0.5rem; }
+.achieve-card p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.65; }
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-top: 3rem; }
+.project-card { padding: 0; overflow: hidden; }
+.project-card-image { height: 200px; position: relative; overflow: hidden; }
+.project-card-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--card-ease); }
+.project-card:hover .project-card-image img { transform: scale(1.08); }
+.project-card-image-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, transparent, rgba(10,10,15,0.8)); }
+.project-card-body { padding: 1.75rem; }
+.project-card-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.75rem; display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; background: rgba(79,195,247,0.1); color: var(--brand-light); border: 1px solid rgba(79,195,247,0.15); }
+.project-card h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.2rem; margin-bottom: 0.5rem; }
+.project-card p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.65; }
+.thought-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 3rem; }
+.thought-card { padding: 2rem; cursor: none; }
+.thought-card .thought-date { font-size: 0.72rem; color: var(--text-muted); margin-bottom: 1rem; letter-spacing: 0.05em; }
+.thought-card h3 { font-family: var(--font-display); font-weight: 600; font-size: 1.1rem; margin-bottom: 0.5rem; line-height: 1.35; transition: color 0.3s; }
+.thought-card:hover h3 { color: var(--brand-light); }
+.thought-card p { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.65; }
+.thought-card .read-more { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 1.25rem; font-size: 0.8rem; font-weight: 600; color: var(--brand-light); transition: gap 0.3s; }
+.thought-card:hover .read-more { gap: 0.7rem; }

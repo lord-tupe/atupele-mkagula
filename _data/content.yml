@@ -1,0 +1,96 @@
+hero:
+  label: "Cybersecurity · IT Consultant · Digital Systems"
+  title_pre: "Atupele Nathan"
+  title_highlight: "Mkagula"
+  subtitle: "Customer Support Agent at betPawa. Music Producer turned Systems Thinker. Building secure, resilient digital platforms in Malawi and beyond."
+  stats:
+    - number: "75%"
+      label: "AVG FCR @ betPawa"
+    - number: "6×"
+      label: "Excellence Certs"
+    - number: "5+"
+      label: "Years Experience"
+
+about:
+  intro: |
+    I currently support thousands of users daily as a **Customer Support Agent at betPawa**, resolving technical issues across Sportsbook, Casino, and Virtual Sports platforms while maintaining industry-leading FCR and CSAT metrics.
+
+    Since 2020 I've run my own **IT consulting practice**, where I diagnose systems, train students, and secure small business infrastructure. My Certificate in Music Production taught me pattern recognition, systems thinking, and creative problem-solving. I now apply those skills directly to cybersecurity and digital infrastructure.
+
+    Grounded in Malawi's entrepreneurial spirit and driven by global ambition, I bridge the gap between **technical precision** and **creative vision**.
+  tags:
+    - Cybersecurity
+    - IT Infrastructure
+    - Digital Risk
+    - Systems Thinking
+    - Music Production
+    - Customer Experience
+  terminal:
+    - "<span class=\"cmd\">$ whoami</span>"
+    - "Atupele Nathan Mkagula"
+    - "<span class=\"cmd\">$ current_role</span>"
+    - "Customer Support Agent @ betPawa"
+    - "<span class=\"cmd\">$ focus</span>"
+    - "Cybersecurity · Backend Security"
+    - "Digital Infrastructure"
+    - "<span class=\"cmd\">$ background</span>"
+    - "Music Producer > IT Consultant"
+    - "> Digital Systems Specialist"
+    - "<span class=\"cmd\">$ location</span>"
+    - "Malawi 🌍"
+    - "<span class=\"cmd\">$ status</span>"
+    - "Available for projects ▮"
+  stats:
+    - number: "5+"
+      label: "Years Experience"
+    - number: "6×"
+      label: "Excellence Certs"
+    - number: "1K+"
+      label: "Users Supported Daily"
+
+experience:
+  - company: "betPawa"
+    role: "Customer Support Agent"
+    period: "2025 – Present"
+    description: "Deliver high-quality multi-channel customer support across sportsbook and casino platforms while consistently achieving performance KPIs."
+    highlights:
+      - "Consistently achieved and exceeded FCR targets of 75% for account access and OTP-related issues."
+      - "Managed high-volume call and chat support using pawaDesk ticket management system."
+      - "Troubleshot technical issues across sportsbook markets including Asian Handicap, Over/Under, and Cashout systems."
+      - "Implemented Responsible Gambling protocols and conducted identity verification to prevent fraud."
+  - company: "Yellow Solar Africa"
+    role: "Credit Officer"
+    period: "2024 – 2025"
+    description: "Managed customer credit portfolios and ensured strong repayment performance while maintaining excellent client relationships."
+    highlights:
+      - "Managed a portfolio of customer contracts, ensuring timely repayments and minimizing credit risk."
+      - "Conducted credit analysis and risk assessments to identify potential repayment challenges."
+      - "Provided financial counselling and developed sustainable repayment solutions."
+      - "Ensured customer feedback responses within 9-hour service level agreements."
+  - company: "Self-Employed"
+    role: "IT Consultant & Freelancer"
+    period: "2020 – Present"
+    description: "Provide technical services and IT support to individuals and small businesses across Malawi."
+    highlights:
+      - "Performed computer diagnostics, system troubleshooting, and data administration."
+      - "Assisted businesses in optimizing IT infrastructure and digital workflows."
+      - "Delivered computer training and digital literacy coaching to students and clients."
+      - "Provided basic computer security and system maintenance services."
+
+skills:  # ... you'd fill in from original code
+  - title: "Customer Experience"
+    icon: "fas fa-headset"
+    description: "Multi-channel support, FCR and CSAT optimization..."
+    tags: ["Support Ops", "Multi-Channel", "FCR & CSAT", "Compliance"]
+  # ... etc.
+
+education:  # etc.
+achievements:  # etc.
+projects:     # etc.
+music:        # etc.
+thoughts:     # etc.
+contact:
+  description: "Whether it's a security audit, infrastructure project, creative collaboration..."
+  linkedin: "https://linkedin.com/in/atupele-mkagula"
+  github: "https://github.com/lord-tupe"
+  twitter: "https://x.com/lord_tupe"

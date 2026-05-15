@@ -1,0 +1,21 @@
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .about-portrait { max-height: 400px; }
+  .about-stats { grid-template-columns: repeat(3, 1fr); }
+  .projects-grid { grid-template-columns: 1fr; }
+  .contact-form { grid-template-columns: 1fr; }
+  .theme-nav { display: none; }
+  .section { padding: 4rem 1.5rem; }
+  .hero-cta-group { flex-direction: column; align-items: center; }
+  .skills-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .about-stats { grid-template-columns: 1fr; }
+  .thought-grid { grid-template-columns: 1fr; }
+  .footer-inner { flex-direction: column; text-align: center; }
+  .hero-title { font-size: 2.2rem; }
+  .edu-grid { grid-template-columns: 1fr; }
+  .achieve-grid { grid-template-columns: 1fr; }
+}

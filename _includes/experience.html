@@ -1,0 +1,23 @@
+{% assign experiences = site.data.content.experience %}
+<section class="section" id="experience" style="background:var(--bg-tertiary);">
+  <div class="section-inner">
+    <div class="section-label fade-in">Professional Journey</div>
+    <h2 class="section-title fade-in fade-in-delay-1">Work Experience</h2>
+    <div class="space-y-6 mt-8">
+      {% for exp in experiences %}
+      <div class="glass-card experience-card fade-in">
+        <div class="exp-header">
+          <div><h3>{{ exp.role }}</h3><span class="exp-company">{{ exp.company }}</span></div>
+          <span class="exp-date">{{ exp.period }}</span>
+        </div>
+        <p style="color:var(--text-secondary); font-size:0.9rem;">{{ exp.description }}</p>
+        <ul>
+          {% for h in exp.highlights %}
+          <li><i class="fas fa-check-circle"></i>{{ h }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

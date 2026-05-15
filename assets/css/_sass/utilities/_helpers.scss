@@ -1,0 +1,8 @@
+.fade-in { opacity: 0; transform: translateY(30px); transition: all 0.8s var(--card-ease); }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+.fade-in-delay-1 { transition-delay: 0.1s; }
+.fade-in-delay-2 { transition-delay: 0.2s; }
+.fade-in-delay-3 { transition-delay: 0.3s; }
+.fade-in-delay-4 { transition-delay: 0.4s; }
+.animate-float { animation: float 6s ease-in-out infinite; }
+.ripple { position: absolute; border-radius: 50%; background: rgba(30,144,255,0.18); transform: scale(0); animation: ripple-anim 600ms var(--easing) forwards; pointer-events: none; }

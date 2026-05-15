@@ -1,0 +1,6 @@
+.footer { padding: 3rem 2rem; border-top: 1px solid var(--border-light); background: var(--bg-secondary); }
+.footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer-text { font-size: 0.8rem; color: var(--text-muted); }
+.footer-links { display: flex; gap: 1.5rem; }
+.footer-links a { color: var(--text-muted); text-decoration: none; font-size: 0.8rem; transition: color 0.3s; cursor: none; }
+.footer-links a:hover { color: var(--text-primary); }

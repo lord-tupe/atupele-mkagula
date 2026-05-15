@@ -1,0 +1,5 @@
+#cursor { position: fixed; top: 0; left: 0; width: 12px; height: 12px; background: var(--brand-gold); border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); transition: width 220ms var(--spring), height 220ms var(--spring), background 220ms, opacity 220ms; mix-blend-mode: exclusion; }
+#cursor-ring { position: fixed; top: 0; left: 0; width: 36px; height: 36px; border: 1.5px solid rgba(255,215,0,0.55); border-radius: 50%; pointer-events: none; z-index: 9998; transform: translate(-50%,-50%); transition: width 380ms var(--easing), height 380ms var(--easing), border-color 380ms, transform 380ms var(--easing); }
+body.cursor-hover #cursor { width: 20px; height: 20px; }
+body.cursor-hover #cursor-ring { width: 54px; height: 54px; border-color: rgba(255,215,0,0.4); }
+@media (hover: none) and (pointer: coarse), (prefers-reduced-motion: reduce) { body { cursor: auto; } #cursor, #cursor-ring { display: none; } }

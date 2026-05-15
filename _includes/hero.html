@@ -1,0 +1,36 @@
+{% assign hero = site.data.content.hero %}
+<section class="hero-section" id="hero">
+  <div class="hero-bg">
+    <div class="hero-bg-image" style="background-image: url('https://image.qwenlm.ai/public_source/144a8f24-32eb-43b6-8595-df52c7e305fd/171272083-df59-4b28-b823-ca50ac943d42.png');"></div>
+    <div class="hero-bg-overlay"></div>
+    <canvas class="hero-canvas" id="heroCanvas"></canvas>
+  </div>
+  <div class="hero-content">
+    <div class="hero-label fade-in">
+      <span class="w-3 h-3 bg-cyan-400 rounded-full animate-pulse inline-block"></span>
+      {{ hero.label }}
+    </div>
+    <h1 class="hero-title fade-in fade-in-delay-1">
+      {{ hero.title_pre | newline_to_br }}<br/><span class="highlight">{{ hero.title_highlight }}</span>
+    </h1>
+    <p class="hero-subtitle fade-in fade-in-delay-2">
+      {{ hero.subtitle }}
+    </p>
+    <div class="hero-cta-group fade-in fade-in-delay-3">
+      <a href="#experience" class="btn-glow">View My Work <i class="fas fa-arrow-down text-xs"></i></a>
+      <a href="#contact" class="btn-outline">Let's Talk <i class="fas fa-arrow-right text-xs"></i></a>
+    </div>
+    <div class="flex gap-8 mt-12 pt-8 border-t border-white/10 justify-center fade-in fade-in-delay-4">
+      {% for stat in hero.stats %}
+      <div class="text-center">
+        <div class="text-cyan-400 font-mono text-3xl font-bold heading-font">{{ stat.number }}</div>
+        <div class="text-zinc-500 text-xs tracking-widest mt-1">{{ stat.label }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <span>SCROLL TO EXPLORE</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>

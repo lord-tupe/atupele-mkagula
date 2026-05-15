@@ -1,0 +1,5 @@
+.loader { position: fixed; inset: 0; z-index: 10000; background: #0a0a0f; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 1.5rem; transition: opacity 0.6s, visibility 0.6s; }
+.loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+.loader-bar { width: 120px; height: 2px; background: rgba(255,255,255,0.1); border-radius: 2px; overflow: hidden; }
+.loader-bar-inner { height: 100%; background: var(--brand-light); border-radius: 2px; animation: loader-progress 1.5s ease-in-out forwards; }
+.loader-text { font-family: var(--font-display); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-secondary); }
