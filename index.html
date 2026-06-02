@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Atupele Nathan Mkagula</title>
+<title>Atupele Nathan Mkagula | Secure Digital Systems • Front-End Development • Cybersecurity</title>
+<meta name="description" content="Atupele Nathan Mkagula builds secure digital systems and solves real technology problems. Front-end development, cybersecurity, and IT consulting based in Blantyre, Malawi.">
 
 <!-- Preconnect for performance -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,17 +13,21 @@
 <!-- Fonts with font-display: swap -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+<!-- Font Awesome for professional icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <style>
   /* CSS Reset */
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
   :root {
+    /* Dark Mode Only */
     --color-bg: #0a0a0f;
-    --color-surface: rgba(255,255,255,0.04);
-    --color-surface-glass: rgba(255,255,255,0.06);
-    --color-border: rgba(255,255,255,0.08);
+    --color-surface: rgba(255, 255, 255, 0.04);
+    --color-surface-glass: rgba(255, 255, 255, 0.06);
+    --color-border: rgba(255, 255, 255, 0.08);
     --color-text: #f0f0f0;
-    --color-text-secondary: rgba(240,240,240,0.6);
+    --color-text-secondary: rgba(240, 240, 240, 0.7);
     --color-accent: #4fc3f7;
     --color-accent-warm: #ffab40;
     --color-accent-purple: #b388ff;
@@ -46,7 +51,7 @@
 
   body {
     font-family: var(--font-body);
-    background: var(--color-bg);
+    background-color: var(--color-bg);
     color: var(--color-text);
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
@@ -61,12 +66,13 @@
     z-index: 1000;
     padding: 1rem 2rem;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    background: rgba(10, 10, 15, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
   }
 
   .nav.scrolled {
-    background: rgba(10,10,15,0.85);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: rgba(10, 10, 15, 0.95);
     border-bottom: 1px solid var(--color-border);
     padding: 0.7rem 2rem;
   }
@@ -119,6 +125,15 @@
     letter-spacing: 0.02em;
     transition: color 0.3s;
     position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .nav-links a i {
+    font-size: 0.9rem;
+    width: 16px;
+    text-align: center;
   }
 
   .nav-links a:hover { color: var(--color-text); }
@@ -168,6 +183,12 @@
     transition: all 0.3s;
   }
 
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
   /* ── HERO SECTIONS ── */
   .hero-section {
     position: relative;
@@ -188,7 +209,6 @@
   .hero-bg-image {
     position: absolute;
     inset: 0;
-    /* Fallback gradient if image fails */
     background: 
       radial-gradient(ellipse at 30% 50%, rgba(79,195,247,0.1) 0%, transparent 60%),
       radial-gradient(ellipse at 70% 30%, rgba(179,136,255,0.08) 0%, transparent 50%),
@@ -236,6 +256,7 @@
     margin-bottom: 1.5rem;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    color: var(--color-accent);
   }
 
   .hero-title {
@@ -245,6 +266,7 @@
     line-height: 1.08;
     letter-spacing: -0.03em;
     margin-bottom: 1.5rem;
+    color: var(--color-text);
   }
 
   .hero-subtitle {
@@ -361,7 +383,6 @@
   .theme-label-infra {
     background: rgba(79,195,247,0.1);
     border: 1px solid rgba(79,195,247,0.2);
-    color: var(--color-accent);
   }
 
   .theme-label-malawi {
@@ -423,6 +444,7 @@
     letter-spacing: -0.02em;
     line-height: 1.15;
     margin-bottom: 1.5rem;
+    color: var(--color-text);
   }
 
   .section-description {
@@ -447,6 +469,10 @@
     border-color: rgba(255,255,255,0.15);
     transform: translateY(-4px);
     box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  }
+
+  .glass-card h3 {
+    color: var(--color-text);
   }
 
   /* ── ABOUT SECTION ── */
@@ -610,79 +636,7 @@
     color: var(--color-text-secondary);
   }
 
-  /* ── PROJECTS SECTION ── */
-  .projects-section {
-    background: linear-gradient(to bottom, var(--color-bg), #0d0d14, var(--color-bg));
-  }
-
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-  }
-
-  .project-card {
-    position: relative;
-    overflow: hidden;
-    padding: 0;
-  }
-
-  .project-card-image {
-    height: 200px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .project-card-image-bg {
-    width: 100%; height: 100%;
-    /* Gradient fallback */
-    background: linear-gradient(135deg, #0a1628, #1a2a4a, #0a1628);
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  .project-card:hover .project-card-image-bg {
-    transform: scale(1.08);
-  }
-
-  .project-card-image-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, transparent, rgba(10,10,15,0.9));
-  }
-
-  .project-card-body {
-    padding: 1.75rem;
-  }
-
-  .project-card-label {
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 0.75rem;
-    display: inline-block;
-    padding: 0.2rem 0.6rem;
-    border-radius: 4px;
-    background: rgba(79,195,247,0.1);
-    color: var(--color-accent);
-    border: 1px solid rgba(79,195,247,0.15);
-  }
-
-  .project-card h3 {
-    font-family: var(--font-display);
-    font-weight: 600;
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .project-card p {
-    font-size: 0.88rem;
-    color: var(--color-text-secondary);
-    line-height: 1.65;
-  }
-
-  /* ─ THOUGHT LEADERSHIP ── */
+  /* ─ THOUGHT LEADERSHIP ─ */
   .thought-section {
     background: var(--color-bg);
   }
@@ -714,6 +668,7 @@
     margin-bottom: 0.75rem;
     line-height: 1.35;
     transition: color 0.3s;
+    color: var(--color-text);
   }
 
   .thought-card:hover h3 { color: var(--color-accent); }
@@ -788,9 +743,8 @@
 
   .form-group input:focus,
   .form-group textarea:focus {
-    border-color: rgba(79,195,247,0.4);
-    background: rgba(255,255,255,0.06);
-    box-shadow: 0 0 0 3px rgba(79,195,247,0.1);
+    border-color: var(--color-accent);
+    background: var(--color-surface-glass);
   }
 
   .form-group textarea {
@@ -825,6 +779,12 @@
   }
 
   .contact-link:hover { color: var(--color-text); }
+
+  .contact-link i {
+    width: 16px;
+    text-align: center;
+    font-size: 1rem;
+  }
 
   /* ── FOOTER ── */
   .footer {
@@ -862,7 +822,7 @@
 
   .footer-links a:hover { color: var(--color-text); }
 
-  /* ── ANIMATIONS ── */
+  /* ── ANIMATIONS ─ */
   .fade-in {
     opacity: 0;
     transform: translateY(30px);
@@ -934,10 +894,10 @@
 
   /* ── MOBILE MENU ── */
   .mobile-menu {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
     inset: 0;
-    z-index: 9999; /* Above everything */
+    z-index: 9999;
     background: rgba(10, 10, 15, 0.98);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
@@ -946,13 +906,11 @@
     justify-content: center;
     gap: 1.5rem;
     
-    /* iOS Safe Areas */
     padding-top: env(safe-area-inset-top);
     padding-bottom: env(safe-area-inset-bottom);
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
     
-    /* Animation */
     opacity: 0;
     visibility: hidden;
     transform: scale(0.98);
@@ -966,12 +924,10 @@
     transform: scale(1);
   }
 
-  /* FIXED: Distinct Close Button Styling */
   .mobile-close-btn {
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
-    /* iOS Safe Area */
     right: calc(1.5rem + env(safe-area-inset-right));
     
     width: 48px;
@@ -1004,7 +960,6 @@
     height: 24px;
   }
 
-  /* Menu Links */
   .mobile-menu a {
     font-family: var(--font-display);
     font-size: clamp(1.25rem, 4vw, 1.5rem);
@@ -1012,7 +967,7 @@
     color: var(--color-text);
     text-decoration: none;
     padding: 0.75rem 2rem;
-    min-height: 48px; /* Large touch target */
+    min-height: 48px;
     display: flex;
     align-items: center;
     border-radius: 12px;
@@ -1020,6 +975,12 @@
     width: 100%;
     max-width: 320px;
     justify-content: center;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .mobile-menu a i {
+    width: 18px;
     text-align: center;
   }
 
@@ -1034,7 +995,6 @@
     transform: scale(0.98);
   }
 
-  /* Staggered Animation for Links */
   .mobile-menu.open a {
     animation: menu-link-fade 0.4s ease forwards;
     opacity: 0;
@@ -1053,7 +1013,6 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
-  /* Prevent Body Scroll */
   body.menu-open {
     overflow: hidden;
     position: fixed;
@@ -1069,7 +1028,8 @@
     .about-grid { grid-template-columns: 1fr; gap: 2rem; }
     .about-portrait { max-height: 400px; }
     .about-stats { grid-template-columns: repeat(3, 1fr); }
-    .projects-grid { grid-template-columns: 1fr; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .thought-grid { grid-template-columns: 1fr; }
     .contact-form { grid-template-columns: 1fr; }
     .theme-nav { display: none; }
     .section { padding: 4rem 1.5rem; }
@@ -1078,8 +1038,6 @@
 
   @media (max-width: 600px) {
     .about-stats { grid-template-columns: 1fr; }
-    .skills-grid { grid-template-columns: 1fr; }
-    .thought-grid { grid-template-columns: 1fr; }
     .footer-inner { flex-direction: column; text-align: center; }
   }
 
@@ -1152,32 +1110,7 @@
     background: linear-gradient(to bottom, var(--color-bg), #0d0d14, var(--color-bg));
   }
 
-  .music-visualizer {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    gap: 3px;
-    height: 60px;
-    margin-top: 2rem;
-    padding: 2rem;
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: 16px;
-  }
-
-  .viz-bar {
-    width: 4px;
-    background: linear-gradient(to top, var(--color-accent-purple), var(--color-accent));
-    border-radius: 2px;
-    animation: viz-bounce 1s ease-in-out infinite;
-  }
-
-  @keyframes viz-bounce {
-    0%, 100% { height: 10px; }
-    50% { height: var(--bar-height, 40px); }
-  }
-
-  /* ── REDUCED MOTION ── */
+  /* ── REDUCED MOTION ─ */
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
       animation: none !important;
@@ -1200,6 +1133,10 @@
 </head>
 <body>
 
+<!-- Custom Cursor (Simple Version) -->
+<div id="cursor" aria-hidden="true"></div>
+<div id="cursor-ring" aria-hidden="true"></div>
+
 <!-- LOADER -->
 <div class="loader" id="loader">
   <div class="loader-text">Loading Experience</div>
@@ -1208,17 +1145,17 @@
 
 <!-- THEME NAV -->
 <nav class="theme-nav" id="themeNav" aria-label="Theme navigation">
-  <button class="theme-nav-dot active" data-target="hero-infrastructure" aria-label="Digital Infrastructure">
-    <span class="tooltip">Digital Infrastructure</span>
+  <button class="theme-nav-dot active" data-target="hero-infrastructure" aria-label="Secure Digital Systems">
+    <span class="tooltip">Secure Systems</span>
   </button>
   <button class="theme-nav-dot" data-target="hero-malawi" aria-label="Malawi Urban Future">
-    <span class="tooltip">Malawi Urban Future</span>
+    <span class="tooltip">Local Impact</span>
   </button>
   <button class="theme-nav-dot" data-target="hero-creative" aria-label="Creative Technology">
-    <span class="tooltip">Creative Technology</span>
+    <span class="tooltip">Creative Tech</span>
   </button>
   <button class="theme-nav-dot" data-target="hero-engineering" aria-label="Systems & Engineering">
-    <span class="tooltip">Systems & Engineering</span>
+    <span class="tooltip">Front-End Focus</span>
   </button>
 </nav>
 
@@ -1230,42 +1167,39 @@
       Atupele Mkagula
     </a>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#thought-leadership">Insights</a></li>
-      <li><a href="#contact" class="nav-cta">Connect</a></li>
+      <li><a href="#about"><i class="fa-solid fa-user" aria-hidden="true"></i> About</a></li>
+      <li><a href="#experience"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Experience</a></li>
+      <li><a href="#skills"><i class="fa-solid fa-code" aria-hidden="true"></i> Skills</a></li>
+      <li><a href="#achievements"><i class="fa-solid fa-trophy" aria-hidden="true"></i> Achievements</a></li>
+      <li><a href="#contact" class="nav-cta"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Connect</a></li>
     </ul>
-    <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-actions">
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </nav>
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
   
-  <!-- FIXED: Clean, distinct close button -->
   <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close menu">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <line x1="18" y1="6" x2="6" y2="18"></line>
-      <line x1="6" y1="6" x2="18" y2="18"></line>
-    </svg>
+    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
   </button>
   
   <nav aria-label="Mobile primary navigation">
-    <a href="#hero-infrastructure" data-close-menu>Home</a>
-    <a href="#about" data-close-menu>About</a>
-    <a href="#skills" data-close-menu>Skills</a>
-    <a href="#projects" data-close-menu>Projects</a>
-    <a href="#music" data-close-menu>Creative Work</a>
-    <a href="#thought-leadership" data-close-menu>Insights</a>
-    <a href="#contact" data-close-menu>Connect</a>
+    <a href="#hero-infrastructure" data-close-menu><i class="fa-solid fa-house" aria-hidden="true"></i> Home</a>
+    <a href="#about" data-close-menu><i class="fa-solid fa-user" aria-hidden="true"></i> About</a>
+    <a href="#experience" data-close-menu><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Experience</a>
+    <a href="#skills" data-close-menu><i class="fa-solid fa-code" aria-hidden="true"></i> Skills</a>
+    <a href="#achievements" data-close-menu><i class="fa-solid fa-trophy" aria-hidden="true"></i> Achievements</a>
+    <a href="#contact" data-close-menu><i class="fa-solid fa-envelope" aria-hidden="true"></i> Connect</a>
   </nav>
 </div>
 
 <!-- ═══════════════════════════════════════ -->
-<!-- HERO 1: DIGITAL INFRASTRUCTURE -->
+<!-- HERO 1: SECURE DIGITAL SYSTEMS -->
 <!-- ═══════════════════════════════════════ -->
 <section class="hero-section" id="hero-infrastructure" data-theme="infrastructure">
   <div class="hero-bg">
@@ -1275,17 +1209,17 @@
   </div>
   <div class="hero-content">
     <div class="hero-label theme-label-infra fade-in">
-      <span>●</span> Digital Infrastructure
+      <i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Secure Digital Systems
     </div>
     <h1 class="hero-title fade-in fade-in-delay-1" data-theme="infrastructure">
-      Building the <span class="highlight">Backbone</span><br>of Africa's Digital Future
+      Building <span class="highlight">Secure</span><br>Digital Experiences
     </h1>
     <p class="hero-subtitle fade-in fade-in-delay-2">
-      Cybersecurity, systems architecture, and backend infrastructure — engineering resilient digital ecosystems that scale across borders and withstand tomorrow's threats.
+      Front-end development, cybersecurity fundamentals, and IT consulting. I solve real technology problems with clean code and user-centric design.
     </p>
     <div class="hero-cta-group fade-in fade-in-delay-3">
-      <a href="#about" class="btn-primary filled">Explore My Work</a>
-      <a href="#contact" class="btn-primary outline">Get In Touch</a>
+      <a href="#about" class="btn-primary filled"><i class="fa-solid fa-arrow-down" aria-hidden="true"></i> Explore My Work</a>
+      <a href="#contact" class="btn-primary outline"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Get In Touch</a>
     </div>
   </div>
   <div class="scroll-indicator">
@@ -1295,7 +1229,7 @@
 </section>
 
 <!-- ═══════════════════════════════════════ -->
-<!-- HERO 2: MALAWI URBAN FUTURE -->
+<!-- HERO 2: MALAWI IMPACT -->
 <!-- ═══════════════════════════════════════ -->
 <section class="hero-section" id="hero-malawi" data-theme="malawi">
   <div class="hero-bg">
@@ -1305,17 +1239,17 @@
   </div>
   <div class="hero-content">
     <div class="hero-label theme-label-malawi fade-in">
-      <span>●</span> Malawi Urban Future
+      <i class="fa-solid fa-flag" aria-hidden="true"></i> Local Impact, Global Standards
     </div>
     <h1 class="hero-title fade-in fade-in-delay-1" data-theme="malawi">
-      From <span class="highlight">Blantyre</span> to the<br>World — Innovation Without Borders
+      Technology Built in <span class="highlight">Blantyre</span><br>for the World
     </h1>
     <p class="hero-subtitle fade-in fade-in-delay-2">
-      Grounded in Malawi's entrepreneurial spirit, building technology that serves communities while competing on the global stage. Where local insight meets world-class execution.
+      Grounded in Malawi's entrepreneurial spirit. I build accessible, secure digital solutions that serve communities while meeting international standards.
     </p>
     <div class="hero-cta-group fade-in fade-in-delay-3">
-      <a href="#projects" class="btn-primary filled" style="background:var(--color-accent-warm);color:#0a0a0f;">View Impact</a>
-      <a href="#contact" class="btn-primary outline">Partner With Me</a>
+      <a href="#experience" class="btn-primary filled" style="background:var(--color-accent-warm);color:#0a0a0f;"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> My Experience</a>
+      <a href="#contact" class="btn-primary outline"><i class="fa-solid fa-handshake" aria-hidden="true"></i> Partner With Me</a>
     </div>
   </div>
   <div class="scroll-indicator">
@@ -1325,7 +1259,7 @@
 </section>
 
 <!-- ═══════════════════════════════════════ -->
-<!-- HERO 3: CREATIVE TECHNOLOGY -->
+<!-- HERO 3: CREATIVE-TECH FUSION -->
 <!-- ═══════════════════════════════════════ -->
 <section class="hero-section" id="hero-creative" data-theme="creative">
   <div class="hero-bg">
@@ -1335,17 +1269,17 @@
   </div>
   <div class="hero-content">
     <div class="hero-label theme-label-creative fade-in">
-      <span>●</span> Creative Technology
+      <i class="fa-solid fa-music" aria-hidden="true"></i> Creative-Tech Fusion
     </div>
     <h1 class="hero-title fade-in fade-in-delay-1" data-theme="creative">
-      Where <span class="highlight">Code</span> Meets<br>Creative Expression
+      Where <span class="highlight">Pattern Recognition</span><br>Meets Code
     </h1>
     <p class="hero-subtitle fade-in fade-in-delay-2">
-      Music production, digital artistry, and sonic exploration — pushing boundaries where technology becomes art and art becomes technology.
+      Music production sharpened my systems thinking. Now I apply that creative discipline to building intuitive, secure front-end experiences.
     </p>
     <div class="hero-cta-group fade-in fade-in-delay-3">
-      <a href="#music" class="btn-primary filled" style="background:var(--color-accent-purple);color:#0a0a0f;">Listen & Explore</a>
-      <a href="#contact" class="btn-primary outline">Collaborate</a>
+      <a href="#skills" class="btn-primary filled" style="background:var(--color-accent-purple);color:#0a0a0f;"><i class="fa-solid fa-code" aria-hidden="true"></i> See My Skills</a>
+      <a href="#contact" class="btn-primary outline"><i class="fa-solid fa-handshake" aria-hidden="true"></i> Collaborate</a>
     </div>
   </div>
   <div class="scroll-indicator">
@@ -1355,7 +1289,7 @@
 </section>
 
 <!-- ══════════════════════════════════════ -->
-<!-- HERO 4: SYSTEMS & ENGINEERING -->
+<!-- HERO 4: FRONT-END FOCUS -->
 <!-- ═══════════════════════════════════════ -->
 <section class="hero-section" id="hero-engineering" data-theme="engineering">
   <div class="hero-bg">
@@ -1365,17 +1299,17 @@
   </div>
   <div class="hero-content">
     <div class="hero-label theme-label-engineering fade-in">
-      <span>●</span> Systems & Engineering
+      <i class="fa-solid fa-gear" aria-hidden="true"></i> Front-End Focus
     </div>
     <h1 class="hero-title fade-in fade-in-delay-1" data-theme="engineering">
-      Precision <span class="highlight">Engineered</span><br>Solutions, Zero Compromise
+      Clean Code, <span class="highlight">Secure Interfaces</span><br>Zero Compromise
     </h1>
     <p class="hero-subtitle fade-in fade-in-delay-2">
-      From circuit-level diagnostics to enterprise architecture — disciplined engineering, operational excellence, and systems that perform under pressure.
+      HTML5, CSS3, vanilla JavaScript. I build accessible, performant user interfaces with security baked in from the first line.
     </p>
     <div class="hero-cta-group fade-in fade-in-delay-3">
-      <a href="#skills" class="btn-primary filled" style="background:var(--color-accent-green);color:#0a0a0f;">Technical Depth</a>
-      <a href="#contact" class="btn-primary outline">Discuss Solutions</a>
+      <a href="#skills" class="btn-primary filled" style="background:var(--color-accent-green);color:#0a0a0f;"><i class="fa-solid fa-code" aria-hidden="true"></i> Technical Depth</a>
+      <a href="#contact" class="btn-primary outline"><i class="fa-solid fa-comments" aria-hidden="true"></i> Discuss Solutions</a>
     </div>
   </div>
   <div class="scroll-indicator">
@@ -1389,8 +1323,8 @@
 <!-- ══════════════════════════════════════ -->
 <section class="section about-section" id="about">
   <div class="section-inner">
-    <div class="section-label fade-in">About</div>
-    <h2 class="section-title fade-in fade-in-delay-1">Engineer. Creative. Visionary.</h2>
+    <div class="section-label fade-in"><i class="fa-solid fa-user" aria-hidden="true"></i> About</div>
+    <h2 class="section-title fade-in fade-in-delay-1">Engineer. Consultant. Problem Solver.</h2>
     <div class="about-grid">
       <div class="about-portrait fade-in fade-in-delay-2" aria-label="Profile portrait">
         <div class="about-portrait-inner">
@@ -1399,26 +1333,26 @@
       </div>
       <div class="about-text fade-in fade-in-delay-3">
         <p>
-          <strong>Atupele Nathan Mkagula</strong> is a technology professional, systems architect, and creative technologist based in Malawi — building at the intersection of infrastructure, security, and innovation.
+          <strong>Atupele Nathan Mkagula</strong> is a technology professional based in Blantyre, Malawi, focused on secure digital systems, front-end development, and practical IT consulting.
         </p>
         <p>
-          With deep expertise in cybersecurity, backend systems, and digital infrastructure, Atupele designs resilient architectures that serve both enterprise and community needs. His work bridges the gap between <strong>technical precision</strong> and <strong>creative vision</strong> — from securing critical systems to producing music that moves people.
+          My philosophy is simple: <em>"Technical skill and creative thinking belong together."</em> I build secure digital systems and solve real technology problems across IT consulting, computer diagnostics, cybersecurity fundamentals, and front-end development.
         </p>
         <p>
-          Rooted in African ingenuity and driven by global ambition, he consults with organizations on digital transformation, builds scalable systems, and creates technology that tells a story.
+          Note: My focus is on front-end and systems security, not backend development. I specialize in clean, accessible, user-centric interfaces and secure architecture patterns.
         </p>
         <div class="about-stats">
           <div class="stat-item">
-            <div class="stat-number">8+</div>
+            <div class="stat-number">4+</div>
             <div class="stat-label">Years Experience</div>
           </div>
           <div class="stat-item">
             <div class="stat-number">50+</div>
-            <div class="stat-label">Projects Delivered</div>
+            <div class="stat-label">Clients Trained</div>
           </div>
           <div class="stat-item">
-            <div class="stat-number">12</div>
-            <div class="stat-label">Industries Served</div>
+            <div class="stat-number">75%+</div>
+            <div class="stat-label">First Contact Resolution</div>
           </div>
         </div>
       </div>
@@ -1427,237 +1361,186 @@
 </section>
 
 <!-- ═══════════════════════════════════════ -->
-<!-- TECHNICAL SKILLS -->
+<!-- PROFESSIONAL EXPERIENCE -->
 <!-- ═══════════════════════════════════════ -->
-<section class="section skills-section" id="skills">
+<section class="section skills-section" id="experience">
   <div class="section-inner">
-    <div class="section-label fade-in">Technical Skills</div>
-    <h2 class="section-title fade-in fade-in-delay-1">Core Competencies</h2>
+    <div class="section-label fade-in"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Experience</div>
+    <h2 class="section-title fade-in fade-in-delay-1">Professional Journey</h2>
     <p class="section-description fade-in fade-in-delay-2">
-      A multidisciplinary toolkit spanning infrastructure, security, creative technology, and strategic consulting.
+      Real-world experience delivering secure, user-focused technology solutions.
     </p>
     <div class="skills-grid">
       <div class="glass-card skill-card fade-in" style="--card-accent: #4fc3f7;">
-        <div class="skill-icon" style="background:rgba(79,195,247,0.1); color:#4fc3f7;" aria-hidden="true">🛡️</div>
-        <h3>Cybersecurity</h3>
-        <p>Threat assessment, penetration testing, security architecture, and incident response for enterprise and critical infrastructure.</p>
+        <div class="skill-icon" style="background:rgba(79,195,247,0.1); color:#4fc3f7;" aria-hidden="true"><i class="fa-solid fa-bullseye"></i></div>
+        <h3>Customer Support Agent</h3>
+        <p class="text-sm text-gray-400 mb-2">betPawa | 2025 - Present</p>
+        <p>Deliver multi-channel support for Sportsbook, Casino and Virtual Sports platforms. Maintain 75%+ First Contact Resolution on account and OTP issues. Troubleshoot front-end technical issues including UI flows, payment gateways, and session handling.</p>
         <div class="skill-tags">
-          <span class="skill-tag">Pen Testing</span>
-          <span class="skill-tag">SIEM</span>
-          <span class="skill-tag">Zero Trust</span>
-          <span class="skill-tag">SOC</span>
+          <span class="skill-tag">Front-End Debugging</span>
+          <span class="skill-tag">User Experience</span>
+          <span class="skill-tag">Technical Communication</span>
         </div>
       </div>
       <div class="glass-card skill-card fade-in fade-in-delay-1" style="--card-accent: #ffab40;">
-        <div class="skill-icon" style="background:rgba(255,171,64,0.1); color:#ffab40;" aria-hidden="true">⚙️</div>
-        <h3>Backend Systems</h3>
-        <p>Distributed systems design, API architecture, database engineering, and high-availability infrastructure deployment.</p>
+        <div class="skill-icon" style="background:rgba(255,171,64,0.1); color:#ffab40;" aria-hidden="true"><i class="fa-solid fa-laptop-code"></i></div>
+        <h3>IT Consultant & Freelancer</h3>
+        <p class="text-sm text-gray-400 mb-2">Self-Employed | 2020 - Present</p>
+        <p>Computer diagnostics, front-end support, cybersecurity basics, and digital literacy training. Help clients optimize workflows, secure their digital presence, and troubleshoot hardware and software issues.</p>
         <div class="skill-tags">
-          <span class="skill-tag">Node.js</span>
-          <span class="skill-tag">Python</span>
-          <span class="skill-tag">PostgreSQL</span>
-          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">System Diagnostics</span>
+          <span class="skill-tag">HTML/CSS Support</span>
+          <span class="skill-tag">Security Awareness</span>
         </div>
       </div>
       <div class="glass-card skill-card fade-in fade-in-delay-2" style="--card-accent: #b388ff;">
-        <div class="skill-icon" style="background:rgba(179,136,255,0.1); color:#b388ff;" aria-hidden="true">🤖</div>
-        <h3>AI & Machine Learning</h3>
-        <p>Intelligent systems, automation pipelines, predictive analytics, and AI-driven solutions for business and creative workflows.</p>
+        <div class="skill-icon" style="background:rgba(179,136,255,0.1); color:#b388ff;" aria-hidden="true"><i class="fa-solid fa-coins"></i></div>
+        <h3>Credit Officer</h3>
+        <p class="text-sm text-gray-400 mb-2">Yellow Solar Africa | 2024 - 2025</p>
+        <p>Managed customer portfolios with focus on digital repayment systems. Conducted risk assessments using data-driven front-end reporting tools. Maintained under 9-hour response SLA using ticketing and CRM interfaces.</p>
         <div class="skill-tags">
-          <span class="skill-tag">TensorFlow</span>
-          <span class="skill-tag">NLP</span>
-          <span class="skill-tag">Automation</span>
-          <span class="skill-tag">LLMs</span>
+          <span class="skill-tag">Digital Systems</span>
+          <span class="skill-tag">Risk Assessment</span>
+          <span class="skill-tag">CRM Tools</span>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ -->
+<!-- CORE SKILLS -->
+<!-- ═══════════════════════════════════════ -->
+<section class="section projects-section" id="skills">
+  <div class="section-inner">
+    <div class="section-label fade-in"><i class="fa-solid fa-code" aria-hidden="true"></i> Core Skills</div>
+    <h2 class="section-title fade-in fade-in-delay-1">Technical Competencies</h2>
+    <p class="section-description fade-in fade-in-delay-2">
+      A focused toolkit for building secure, accessible, user-centric digital experiences.
+    </p>
+    <div class="skills-grid">
+      <div class="glass-card skill-card fade-in" style="--card-accent: #4fc3f7;">
+        <div class="skill-icon" style="background:rgba(79,195,247,0.1); color:#4fc3f7;" aria-hidden="true"><i class="fa-solid fa-code"></i></div>
+        <h3>Front-End Development</h3>
+        <p>HTML5, CSS3, JavaScript, Tailwind CSS, custom animations, responsive design, accessibility (ARIA), cross-browser testing. Clean, semantic code that works everywhere.</p>
+      </div>
+      <div class="glass-card skill-card fade-in fade-in-delay-1" style="--card-accent: #ffab40;">
+        <div class="skill-icon" style="background:rgba(255,171,64,0.1); color:#ffab40;" aria-hidden="true"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>Cybersecurity Fundamentals</h3>
+        <p>Threat awareness, identity verification flows, phishing prevention, data privacy basics. Security considerations baked into front-end architecture.</p>
+      </div>
+      <div class="glass-card skill-card fade-in fade-in-delay-2" style="--card-accent: #b388ff;">
+        <div class="skill-icon" style="background:rgba(179,136,255,0.1); color:#b388ff;" aria-hidden="true"><i class="fa-solid fa-laptop-code"></i></div>
+        <h3>IT Consulting</h3>
+        <p>System troubleshooting, performance optimization, user training, workflow digitization. Empowering clients to navigate and protect their digital presence.</p>
       </div>
       <div class="glass-card skill-card fade-in fade-in-delay-3" style="--card-accent: #69f0ae;">
-        <div class="skill-icon" style="background:rgba(105,240,174,0.1); color:#69f0ae;" aria-hidden="true">🏗️</div>
-        <h3>Infrastructure & DevOps</h3>
-        <p>Cloud architecture, CI/CD pipelines, network engineering, and infrastructure as code for scalable operations.</p>
-        <div class="skill-tags">
-          <span class="skill-tag">AWS</span>
-          <span class="skill-tag">Terraform</span>
-          <span class="skill-tag">Kubernetes</span>
-          <span class="skill-tag">Linux</span>
-        </div>
-      </div>
-      <div class="glass-card skill-card fade-in fade-in-delay-4" style="--card-accent: #4fc3f7;">
-        <div class="skill-icon" style="background:rgba(79,195,247,0.1); color:#4fc3f7;" aria-hidden="true"></div>
-        <h3>Music Production</h3>
-        <p>Audio engineering, sound design, composition, and creative production — from studio sessions to live sound environments.</p>
-        <div class="skill-tags">
-          <span class="skill-tag">Ableton</span>
-          <span class="skill-tag">Mixing</span>
-          <span class="skill-tag">Sound Design</span>
-          <span class="skill-tag">Mastering</span>
-        </div>
-      </div>
-      <div class="glass-card skill-card fade-in fade-in-delay-4" style="--card-accent: #ffab40;">
-        <div class="skill-icon" style="background:rgba(255,171,64,0.1); color:#ffab40;" aria-hidden="true">💼</div>
-        <h3>Strategic Consulting</h3>
-        <p>Digital transformation strategy, technology advisory, organizational design, and innovation consulting for growth-stage ventures.</p>
-        <div class="skill-tags">
-          <span class="skill-tag">Strategy</span>
-          <span class="skill-tag">Advisory</span>
-          <span class="skill-tag">Growth</span>
-          <span class="skill-tag">Leadership</span>
-        </div>
+        <div class="skill-icon" style="background:rgba(105,240,174,0.1); color:#69f0ae;" aria-hidden="true"><i class="fa-solid fa-lightbulb"></i></div>
+        <h3>Creative-Tech Fusion</h3>
+        <p>Music production background sharpens systems thinking. Applied to building intuitive interfaces and solving complex UX problems creatively.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ═══════════════════════════════════════ -->
-<!-- PROJECTS -->
-<!-- ══════════════════════════════════════ -->
-<section class="section projects-section" id="projects">
-  <div class="section-inner">
-    <div class="section-label fade-in">Featured Projects</div>
-    <h2 class="section-title fade-in fade-in-delay-1">Selected Work</h2>
-    <p class="section-description fade-in fade-in-delay-2">
-      A curated selection of infrastructure builds, security implementations, creative productions, and technology solutions.
-    </p>
-    <div class="projects-grid">
-      <div class="glass-card project-card fade-in">
-        <div class="project-card-image">
-          <div class="project-card-image-bg" style="background:linear-gradient(135deg, #0a1628, #1a2a4a, #0a1628);"></div>
-          <div class="project-card-image-overlay"></div>
-        </div>
-        <div class="project-card-body">
-          <span class="project-card-label">Cybersecurity</span>
-          <h3>Enterprise Security Architecture</h3>
-          <p>Designed and implemented a zero-trust security framework for a financial services organization, reducing incident response time by 70%.</p>
-        </div>
-      </div>
-      <div class="glass-card project-card fade-in fade-in-delay-1">
-        <div class="project-card-image">
-          <div class="project-card-image-bg" style="background:linear-gradient(135deg, #1a0a28, #2a1a4a, #1a0a28);"></div>
-          <div class="project-card-image-overlay"></div>
-        </div>
-        <div class="project-card-body">
-          <span class="project-card-label" style="background:rgba(179,136,255,0.1);color:#b388ff;border-color:rgba(179,136,255,0.15);">Creative</span>
-          <h3>Immersive Sound Design Project</h3>
-          <p>Creative audio-visual experience combining generative sound design with real-time visual synthesis for an immersive exhibition.</p>
-        </div>
-      </div>
-      <div class="glass-card project-card fade-in fade-in-delay-2">
-        <div class="project-card-image">
-          <div class="project-card-image-bg" style="background:linear-gradient(135deg, #0a2818, #1a4a2a, #0a2818);"></div>
-          <div class="project-card-image-overlay"></div>
-        </div>
-        <div class="project-card-body">
-          <span class="project-card-label" style="background:rgba(105,240,174,0.1);color:#69f0ae;border-color:rgba(105,240,174,0.15);">Infrastructure</span>
-          <h3>Cloud Migration & Optimization</h3>
-          <p>End-to-end migration of legacy on-premise systems to cloud-native architecture, achieving 40% cost reduction and 99.99% uptime.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+<!-- EDUCATION -->
 <!-- ═══════════════════════════════════════ -->
-<!-- MUSIC & CREATIVE WORK -->
-<!-- ══════════════════════════════════════ -->
-<section class="section music-section" id="music">
+<section class="section music-section" id="education">
   <div class="section-inner">
     <div class="section-label fade-in" style="color:var(--color-accent-purple);">
       <span style="display:inline-block;width:24px;height:1px;background:var(--color-accent-purple);"></span>
-      Creative Work
+      Education
     </div>
-    <h2 class="section-title fade-in fade-in-delay-1">Music & Sonic Innovation</h2>
+    <h2 class="section-title fade-in fade-in-delay-1">Learning Journey</h2>
     <p class="section-description fade-in fade-in-delay-2">
-      Exploring the space where technology amplifies creativity — from electronic production to cinematic soundscapes, every project is a fusion of precision and emotion.
+      Formal training and self-directed learning focused on practical technology skills.
     </p>
     <div class="skills-grid" style="margin-top:2rem;">
       <div class="glass-card skill-card fade-in fade-in-delay-3" style="--card-accent:#b388ff;">
-        <div class="skill-icon" style="background:rgba(179,136,255,0.1);color:#b388ff;" aria-hidden="true">🎹</div>
-        <h3>Electronic Production</h3>
-        <p>Synthesizer-driven compositions, beat-making, and arrangement across ambient, electronic, and hybrid genres.</p>
+        <div class="skill-icon" style="background:rgba(179,136,255,0.1);color:#b388ff;" aria-hidden="true"><i class="fa-solid fa-music"></i></div>
+        <h3>University of Malawi</h3>
+        <p class="text-sm text-gray-400 mb-2">Chancellor College | Certificate in Music Production | 2022</p>
+        <p>Pattern recognition, creative systems, iterative design thinking. Skills directly applicable to front-end problem solving and user experience design.</p>
       </div>
       <div class="glass-card skill-card fade-in fade-in-delay-3" style="--card-accent:#4fc3f7;">
-        <div class="skill-icon" style="background:rgba(79,195,247,0.1);color:#4fc3f7;" aria-hidden="true">🎬</div>
-        <h3>Film & Media Scoring</h3>
-        <p>Cinematic compositions and sound design for visual media, documentaries, and digital storytelling projects.</p>
+        <div class="skill-icon" style="background:rgba(79,195,247,0.1);color:#4fc3f7;" aria-hidden="true"><i class="fa-solid fa-laptop-code"></i></div>
+        <h3>NACIT</h3>
+        <p class="text-sm text-gray-400 mb-2">National College of Information Technology | Level 4 Diploma in Computing | 2019-2020</p>
+        <p>Foundations in IT infrastructure, diagnostics, and digital systems. Practical technical training for real-world technology challenges.</p>
       </div>
       <div class="glass-card skill-card fade-in fade-in-delay-3" style="--card-accent:#ffab40;">
-        <div class="skill-icon" style="background:rgba(255,171,64,0.1);color:#ffab40;" aria-hidden="true">🔊</div>
-        <h3>Live Sound Engineering</h3>
-        <p>Stage audio systems, live mixing, and real-time sound processing for performances and events.</p>
+        <div class="skill-icon" style="background:rgba(255,171,64,0.1);color:#ffab40;" aria-hidden="true"><i class="fa-solid fa-graduation-cap"></i></div>
+        <h3>Chinsapo Secondary School</h3>
+        <p class="text-sm text-gray-400 mb-2">School Certificate of Education | 2017</p>
+        <p>Analytical foundation and problem-solving mindset. Early development of the systematic thinking applied to technology work today.</p>
       </div>
     </div>
-    <div class="music-visualizer fade-in fade-in-delay-4" id="musicViz" aria-hidden="true"></div>
   </div>
 </section>
 
 <!-- ═══════════════════════════════════════ -->
-<!-- THOUGHT LEADERSHIP -->
+<!-- KEY ACHIEVEMENTS -->
 <!-- ═══════════════════════════════════════ -->
-<section class="section thought-section" id="thought-leadership">
+<section class="section thought-section" id="achievements">
   <div class="section-inner">
-    <div class="section-label fade-in">Thought Leadership</div>
-    <h2 class="section-title fade-in fade-in-delay-1">Insights & Perspectives</h2>
+    <div class="section-label fade-in"><i class="fa-solid fa-trophy" aria-hidden="true"></i> Achievements</div>
+    <h2 class="section-title fade-in fade-in-delay-1">Key Wins</h2>
     <p class="section-description fade-in fade-in-delay-2">
-      Writing on technology, African innovation, cybersecurity strategy, and the creative future of engineering.
+      Measurable impact and recognition for technical excellence and client empowerment.
     </p>
     <div class="thought-grid">
       <div class="glass-card thought-card fade-in">
-        <div class="thought-date">December 2024</div>
-        <h3>Building Secure Infrastructure in Emerging Markets</h3>
-        <p>Why cybersecurity frameworks designed for Silicon Valley don't translate to African contexts — and what we need instead.</p>
-        <div class="read-more">Read more →</div>
+        <div class="thought-date">Performance Metric</div>
+        <h3>75%+ First Contact Resolution</h3>
+        <p>Consistently exceeded FCR targets on front-end account and access issues at betPawa through clear technical communication and systematic troubleshooting.</p>
+        <div class="read-more">Quality Focus <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></div>
       </div>
       <div class="glass-card thought-card fade-in fade-in-delay-1">
-        <div class="thought-date">November 2024</div>
-        <h3>The Engineer as Creative: Redefining Technical Identity</h3>
-        <p>How music production and creative workflows sharpen systems thinking and lead to better engineering outcomes.</p>
-        <div class="read-more">Read more →</div>
+        <div class="thought-date">Training Impact</div>
+        <h3>50+ Clients Empowered</h3>
+        <p>Trained individuals and small businesses in digital literacy and basic cybersecurity hygiene, helping them navigate and protect their online presence.</p>
+        <div class="read-more">Client Success <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></div>
       </div>
       <div class="glass-card thought-card fade-in fade-in-delay-2">
-        <div class="thought-date">October 2024</div>
-        <h3>Digital Infrastructure as National Strategy for Malawi</h3>
-        <p>A blueprint for how strategic investment in digital infrastructure can accelerate economic transformation across the region.</p>
-        <div class="read-more">Read more →</div>
+        <div class="thought-date">Professional Development</div>
+        <h3>pawaTech Training with Distinction</h3>
+        <p>Completed global training program with distinction and earned 6 Excellence Certificates, demonstrating commitment to continuous learning.</p>
+        <div class="read-more">Growth Mindset <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></div>
+      </div>
+      <div class="glass-card thought-card fade-in fade-in-delay-3">
+        <div class="thought-date">Unique Edge</div>
+        <h3>Creative-Tech Bridge</h3>
+        <p>Applied music production systems-thinking to front-end UX problem-solving, bringing pattern recognition and creative discipline to technical work.</p>
+        <div class="read-more">Innovation <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════ -->
+<!-- ═══════════════════════════════════════ -->
 <!-- CONTACT -->
 <!-- ═══════════════════════════════════════ -->
 <section class="section contact-section" id="contact">
   <div class="contact-inner">
-    <div class="section-label fade-in" style="justify-content:center;">Connect</div>
+    <div class="section-label fade-in" style="justify-content:center;"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Connect</div>
     <h2 class="section-title fade-in fade-in-delay-1" style="text-align:center;">Let's Build Something<br>Meaningful Together</h2>
     <p class="section-description fade-in fade-in-delay-2" style="text-align:center;">
-      Whether it's a security audit, infrastructure project, creative collaboration, or strategic consultation — I'm always interested in conversations that push boundaries.
+      Based in Blantyre, Malawi. Open to collaboration and strategic opportunities in secure digital systems, front-end development, and IT consulting.
     </p>
-    <form class="contact-form fade-in fade-in-delay-3" id="contactForm">
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name">
-      </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email">
-      </div>
-      <div class="form-group full-width">
-        <label for="subject">Subject</label>
-        <input type="text" id="subject" name="subject" placeholder="What's this about?">
-      </div>
-      <div class="form-group full-width">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Tell me about your project or idea..." required></textarea>
-      </div>
-      <div class="form-submit">
-        <button type="submit" class="btn-primary filled" style="min-width:200px;">Send Message</button>
-      </div>
-    </form>
+    
+    <!-- Contact Details -->
+    <div class="contact-links fade-in fade-in-delay-3" style="margin-bottom: 2rem;">
+      <a href="mailto:atupelemkagulaofficial@gmail.com" class="contact-link"><i class="fa-solid fa-envelope" aria-hidden="true"></i> atupelemkagulaofficial@gmail.com</a>
+      <a href="tel:+265881762894" class="contact-link"><i class="fa-solid fa-phone" aria-hidden="true"></i> +265 881 762 894</a>
+      <a href="https://about.me/atupele.mkagula" target="_blank" rel="noopener noreferrer" class="contact-link"><i class="fa-solid fa-globe" aria-hidden="true"></i> about.me/atupele.mkagula</a>
+    </div>
+    
+    <!-- Social Links -->
     <div class="contact-links fade-in fade-in-delay-4">
-      <a href="mailto:hello@atupelmkagula.com" class="contact-link">📧 hello@atupelmkagula.com</a>
-      <a href="#" class="contact-link">💼 LinkedIn</a>
-      <a href="#" class="contact-link">🐦 Twitter / X</a>
-      <a href="#" class="contact-link"> SoundCloud</a>
+      <a href="https://linkedin.com/in/atupele-mkagula" target="_blank" rel="noopener noreferrer" class="contact-link"><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+      <a href="https://github.com/lord-tupe" target="_blank" rel="noopener noreferrer" class="contact-link"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+      <a href="https://x.com/lord_tupe" target="_blank" rel="noopener noreferrer" class="contact-link"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i> Twitter / X</a>
     </div>
   </div>
 </section>
@@ -1665,12 +1548,13 @@
 <!-- FOOTER -->
 <footer class="footer">
   <div class="footer-inner">
-    <div class="footer-text">© 2024 Atupele Nathan Mkagula. All rights reserved.</div>
+    <div class="footer-text">© 2026 Atupele Nathan Mkagula. All rights reserved.</div>
     <div class="footer-links">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#music">Creative</a>
-      <a href="#contact">Contact</a>
+      <a href="#about"><i class="fa-solid fa-user" aria-hidden="true"></i> About</a>
+      <a href="#experience"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Experience</a>
+      <a href="#skills"><i class="fa-solid fa-code" aria-hidden="true"></i> Skills</a>
+      <a href="#achievements"><i class="fa-solid fa-trophy" aria-hidden="true"></i> Achievements</a>
+      <a href="#contact"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Contact</a>
     </div>
   </div>
 </footer>
@@ -1679,21 +1563,63 @@
 // ── SAFE INIT: Wait for DOM ─
 document.addEventListener('DOMContentLoaded', () => {
   
-  // ── LOADER ──
+  // ── LOADER ─
   const loader = document.getElementById('loader');
   if (loader) {
-    // Hide after content is ready, not arbitrary timeout
     setTimeout(() => loader.classList.add('hidden'), 800);
   }
 
-  // ── NAV SCROLL ──
+  // ── NAV SCROLL ─
   const nav = document.getElementById('mainNav');
   const onScroll = () => {
     if (nav) nav.classList.toggle('scrolled', window.scrollY > 50);
   };
   window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll(); // Initial check
+  onScroll();
 
+  // ── SIMPLE CURSOR SYSTEM ──
+  const cursor = document.getElementById('cursor');
+  const cursorRing = document.getElementById('cursor-ring');
+  let mouseX = 0, mouseY = 0;
+  let ringX = 0, ringY = 0;
+  
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    if (cursor) {
+      cursor.style.left = mouseX + 'px';
+      cursor.style.top = mouseY + 'px';
+    }
+  }, { passive: true });
+  
+  function animateRing() {
+    ringX += (mouseX - ringX) * 0.14;
+    ringY += (mouseY - ringY) * 0.14;
+    if (cursorRing) {
+      cursorRing.style.left = ringX + 'px';
+      cursorRing.style.top = ringY + 'px';
+    }
+    requestAnimationFrame(animateRing);
+  }
+  
+  if (cursor && cursorRing) {
+    animateRing();
+    const interactiveElements = document.querySelectorAll('a, button, .card, .skill-pill, .badge-float, .nav-link, .theme-nav-dot');
+    interactiveElements.forEach(el => {
+      el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+      el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+    });
+  }
+  
+  // Disable cursor on touch devices or reduced motion
+  const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (isTouchDevice || prefersReducedMotion) {
+    if (cursor) cursor.style.display = 'none';
+    if (cursorRing) cursorRing.style.display = 'none';
+    document.body.style.cursor = 'auto';
+  }
+  
   // ─ MOBILE MENU LOGIC ──
   const hamburgerBtn = document.getElementById('hamburger');
   const mobileMenuEl = document.getElementById('mobileMenu');
@@ -1704,50 +1630,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function openMobileMenu() {
     if (!mobileMenuEl || !hamburgerBtn) return;
-    
-    // Save scroll position
     scrollY = window.scrollY;
     document.documentElement.style.setProperty('--scroll-top', `-${scrollY}px`);
-    
-    // Show menu
     mobileMenuEl.classList.add('open');
     hamburgerBtn.setAttribute('aria-expanded', 'true');
     document.body.classList.add('menu-open');
-    
-    // Focus first link after transition
     const firstLink = mobileMenuEl.querySelector('a');
     setTimeout(() => firstLink?.focus(), 300);
-    
-    // Trap focus
     document.addEventListener('keydown', handleFocusTrap);
   }
 
   function closeMobileMenu() {
     if (!mobileMenuEl || !hamburgerBtn) return;
-    
-    // Hide menu
     mobileMenuEl.classList.remove('open');
     hamburgerBtn.setAttribute('aria-expanded', 'false');
     document.body.classList.remove('menu-open');
-    
-    // Restore scroll position
     document.documentElement.style.removeProperty('--scroll-top');
     window.scrollTo(0, scrollY);
-    
-    // Return focus to hamburger
-    hamburgerBtn.focus();
-    
-    // Remove focus trap
+    hamburgerBtn?.focus();
     document.removeEventListener('keydown', handleFocusTrap);
   }
 
   function handleFocusTrap(e) {
     if (e.key !== 'Tab' || !mobileMenuEl.classList.contains('open')) return;
-    
     const focusable = mobileMenuEl.querySelectorAll('a, button');
     const first = focusable[0];
     const last = focusable[focusable.length - 1];
-    
     if (e.shiftKey && document.activeElement === first) {
       e.preventDefault();
       last.focus();
@@ -1757,42 +1665,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  //  Event Listeners ─
-  
-  // Open via Hamburger
   if (hamburgerBtn) {
     hamburgerBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      e.stopPropagation(); // Prevent bubbling
+      e.stopPropagation();
       openMobileMenu();
     });
   }
 
-  // Close via Close Button
   if (mobileCloseBtn) {
     mobileCloseBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      e.stopPropagation(); // Prevent bubbling
+      e.stopPropagation();
       closeMobileMenu();
     });
   }
 
-  // Close via Link Click
   menuLinks?.forEach(link => {
     link.addEventListener('click', () => {
-      // Small delay to allow touch feedback before closing
       setTimeout(() => closeMobileMenu(), 100);
     });
   });
 
-  // Close via Escape Key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && mobileMenuEl?.classList.contains('open')) {
       closeMobileMenu();
     }
   });
 
-  // Close via Backdrop Click (clicking outside the content area)
   mobileMenuEl?.addEventListener('click', (e) => {
     if (e.target === mobileMenuEl) {
       closeMobileMenu();
@@ -1804,14 +1704,14 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        fadeObserver.unobserve(entry.target); // Only animate once
+        fadeObserver.unobserve(entry.target);
       }
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
   document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
 
-  // ─ THEME NAV DOTS ──
+  //  THEME NAV DOTS ──
   const themeDots = document.querySelectorAll('.theme-nav-dot');
   const heroSections = document.querySelectorAll('.hero-section');
 
@@ -1836,54 +1736,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   heroSections.forEach(s => heroObserver.observe(s));
 
-  // ── FORM HANDLER ──
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const btn = contactForm.querySelector('button[type="submit"]');
-      if (!btn) return;
-      
-      const origText = btn.textContent;
-      btn.textContent = 'Message Sent ✓';
-      btn.style.background = '#69f0ae';
-      btn.disabled = true;
-      
-      // Simulate send (replace with actual form handler)
-      setTimeout(() => {
-        btn.textContent = origText;
-        btn.style.background = '';
-        btn.disabled = false;
-        contactForm.reset();
-      }, 2500);
-    });
-  }
-
-  // ── MUSIC VISUALIZER ──
-  const vizContainer = document.getElementById('musicViz');
-  if (vizContainer) {
-    for (let i = 0; i < 60; i++) {
-      const bar = document.createElement('div');
-      bar.className = 'viz-bar';
-      const h = 8 + Math.random() * 45;
-      bar.style.setProperty('--bar-height', h + 'px');
-      bar.style.animationDelay = (Math.random() * 1.5) + 's';
-      bar.style.animationDuration = (0.6 + Math.random() * 0.8) + 's';
-      vizContainer.appendChild(bar);
-    }
-  }
-
-  // ── CANVAS ANIMATIONS (with error handling) ──
+  // ── CANVAS ANIMATIONS ─
   function safeCanvasInit(canvasId, drawFn) {
     const canvas = document.getElementById(canvasId);
     if (!canvas) return;
-    
     const ctx = canvas.getContext('2d');
     if (!ctx) {
       console.warn(`Canvas 2D context not available for ${canvasId}`);
       return;
     }
-    
     function resize() {
       const parent = canvas.parentElement;
       if (parent) {
@@ -1891,10 +1752,8 @@ document.addEventListener('DOMContentLoaded', () => {
         canvas.height = parent.offsetHeight;
       }
     }
-    
     resize();
     window.addEventListener('resize', resize, { passive: true });
-    
     try {
       drawFn(ctx, canvas, resize);
     } catch (err) {
@@ -1902,11 +1761,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // ── INFRASTRUCTURE CANVAS: Data Stream Particles ──
   safeCanvasInit('canvas-infra', (ctx, canvas) => {
     const particles = [];
-    const PARTICLE_COUNT = 60; // Reduced for performance
-
+    const PARTICLE_COUNT = 60;
     for (let i = 0; i < PARTICLE_COUNT; i++) {
       particles.push({
         x: Math.random() * canvas.width,
@@ -1918,42 +1775,32 @@ document.addEventListener('DOMContentLoaded', () => {
         hue: 190 + Math.random() * 30
       });
     }
-
     function draw() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      // Grid lines (subtle)
       ctx.strokeStyle = 'rgba(79,195,247,0.03)';
       ctx.lineWidth = 1;
       const gridSize = 80;
       for (let x = 0; x < canvas.width; x += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(x, 0); ctx.lineTo(x, canvas.height); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, canvas.height); ctx.stroke();
       }
       for (let y = 0; y < canvas.height; y += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(0, y); ctx.lineTo(canvas.width, y); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(canvas.width, y); ctx.stroke();
       }
-
-      // Particles
       for (let i = 0; i < particles.length; i++) {
         const p = particles[i];
         p.x += p.vx; p.y += p.vy;
         if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
         if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
-
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
         ctx.fillStyle = `hsla(${p.hue}, 80%, 70%, ${p.alpha})`;
         ctx.fill();
       }
-
       requestAnimationFrame(draw);
     }
     draw();
   });
 
-  // ── MALAWI CANVAS: Warm Light Trails ──
   safeCanvasInit('canvas-malawi', (ctx, canvas) => {
     const trails = [];
     for (let i = 0; i < 20; i++) {
@@ -1966,22 +1813,14 @@ document.addEventListener('DOMContentLoaded', () => {
         color: Math.random() > 0.5 ? '#ffab40' : '#ffd54f'
       });
     }
-
     function draw() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       const time = Date.now() * 0.001;
-
-      // Ambient glow
-      const grd = ctx.createRadialGradient(
-        canvas.width * 0.5, canvas.height * 0.5, 0,
-        canvas.width * 0.5, canvas.height * 0.5, canvas.width * 0.5
-      );
+      const grd = ctx.createRadialGradient(canvas.width * 0.5, canvas.height * 0.5, 0, canvas.width * 0.5, canvas.height * 0.5, canvas.width * 0.5);
       grd.addColorStop(0, 'rgba(255,171,64,0.03)');
       grd.addColorStop(1, 'transparent');
       ctx.fillStyle = grd;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-      // Light trails
       trails.forEach(trail => {
         trail.x += trail.speed;
         if (trail.x > canvas.width + 50) trail.x = -50;
@@ -1994,30 +1833,21 @@ document.addEventListener('DOMContentLoaded', () => {
         ctx.stroke();
         ctx.globalAlpha = 1;
       });
-
       requestAnimationFrame(draw);
     }
     draw();
   });
 
-  // ── CREATIVE CANVAS: Audio Waveforms ─
   safeCanvasInit('canvas-creative', (ctx, canvas) => {
     function draw() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       const time = Date.now() * 0.001;
-
-      // Multiple waveforms
       for (let w = 0; w < 3; w++) {
         ctx.beginPath();
         const baseY = canvas.height * 0.3 + w * 70;
-        const colors = [
-          'rgba(179,136,255,0.12)',
-          'rgba(79,195,247,0.1)',
-          'rgba(255,171,64,0.08)'
-        ];
+        const colors = ['rgba(179,136,255,0.12)', 'rgba(79,195,247,0.1)', 'rgba(255,171,64,0.08)'];
         ctx.strokeStyle = colors[w];
         ctx.lineWidth = 1.5;
-
         for (let x = 0; x < canvas.width; x += 5) {
           const freq1 = Math.sin(x * 0.008 + time * (1.2 + w * 0.3)) * 30;
           const freq2 = Math.sin(x * 0.015 + time * 1.8 + w) * 15;
@@ -2032,14 +1862,11 @@ document.addEventListener('DOMContentLoaded', () => {
     draw();
   });
 
-  // ── ENGINEERING CANVAS: Blueprint Grid ──
   safeCanvasInit('canvas-eng', (ctx, canvas) => {
     let angle = 0;
     function draw() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       angle += 0.01;
-
-      // Blueprint grid
       ctx.strokeStyle = 'rgba(105,240,174,0.04)';
       ctx.lineWidth = 0.5;
       const gs = 50;
@@ -2049,21 +1876,18 @@ document.addEventListener('DOMContentLoaded', () => {
       for (let y = 0; y < canvas.height; y += gs) {
         ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(canvas.width, y); ctx.stroke();
       }
-
-      // Scanning line
       const scanY = (Date.now() * 0.05) % canvas.height;
       ctx.beginPath();
       ctx.moveTo(0, scanY); ctx.lineTo(canvas.width, scanY);
       ctx.strokeStyle = 'rgba(105,240,174,0.06)';
       ctx.lineWidth = 1;
       ctx.stroke();
-
       requestAnimationFrame(draw);
     }
     draw();
   });
 
-  // ── PARALLAX EFFECT (fixed logic) ──
+  // ── PARALLAX EFFECT ──
   const parallaxBgs = document.querySelectorAll('.hero-bg-image');
   const onParallaxScroll = () => {
     const scrollY = window.scrollY;
@@ -2071,7 +1895,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const section = bg.closest('.hero-section');
       if (!section) return;
       const rect = section.getBoundingClientRect();
-      // Only animate if section is in/near viewport
       if (rect.top < window.innerHeight && rect.bottom > 0) {
         const speed = 0.15;
         bg.style.transform = `translateY(${scrollY * speed}px) scale(1.05)`;
@@ -2079,14 +1902,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
   window.addEventListener('scroll', onParallaxScroll, { passive: true });
-  onParallaxScroll(); // Initial
-
-  // ── CLEANUP: Remove listeners on page hide (performance) ──
-  document.addEventListener('visibilitychange', () => {
-    if (document.hidden) {
-      // Pause heavy animations if needed
-    }
-  });
+  onParallaxScroll();
 });
 </script>
 </body>
