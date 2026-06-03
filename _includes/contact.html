@@ -1,0 +1,19 @@
+<section class="section contact-section story-chapter" id="contact">
+  <div class="contact-inner">
+    <div class="section-label fade-in" style="justify-content:center;"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Connect</div>
+    <h2 class="section-title fade-in fade-in-delay-1" style="text-align:center;">Let's Build Something<br>Meaningful Together</h2>
+    <p class="section-description fade-in fade-in-delay-2" style="text-align:center;">Based in {{ site.data.site.location }}. Open to collaboration and strategic opportunities in secure digital systems, front-end development, and IT consulting.</p>
+    
+    <div class="contact-links fade-in fade-in-delay-3" style="margin-bottom: 2rem;">
+      <a href="mailto:{{ site.data.site.email }}" class="contact-link"><i class="fa-solid fa-envelope" aria-hidden="true"></i> {{ site.data.site.email }}</a>
+      <a href="tel:{{ site.data.site.phone }}" class="contact-link"><i class="fa-solid fa-phone" aria-hidden="true"></i> {{ site.data.site.phone }}</a>
+      <a href="{{ site.data.site.website }}" target="_blank" rel="noopener noreferrer" class="contact-link"><i class="fa-solid fa-globe" aria-hidden="true"></i> {{ site.data.site.website | remove: "https://" }}</a>
+    </div>
+    
+    <div class="contact-links fade-in fade-in-delay-4">
+      {% for social in site.data.site.social %}
+        <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer" class="contact-link"><i class="{{ social.icon }}" aria-hidden="true"></i> {{ social.platform }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
