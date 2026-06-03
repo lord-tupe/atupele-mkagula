@@ -1,0 +1,17 @@
+<section class="section story-chapter" id="education" style="background: linear-gradient(to bottom, var(--color-bg), #0d0d14, var(--color-bg));">
+  <div class="section-inner">
+    <div class="section-label fade-in" style="color:var(--color-accent-purple);"><span style="display:inline-block;width:24px;height:1px;background:var(--color-accent-purple);"></span> Education</div>
+    <h2 class="section-title fade-in fade-in-delay-1">Learning Journey</h2>
+    <p class="section-description fade-in fade-in-delay-2">Formal training and self-directed learning focused on practical technology skills.</p>
+    <div class="skills-grid" style="margin-top:2rem;">
+      {% for edu in site.data.education.items %}
+        <div class="glass-card skill-card fade-in fade-in-delay-3" style="--card-accent:{{ edu.accent }};">
+          <div class="skill-icon" style="background:{{ edu.accent }}1A; color:{{ edu.accent }};" aria-hidden="true"><i class="{{ edu.icon }}"></i></div>
+          <h3>{{ edu.institution }}</h3>
+          <p class="meta-text">{{ edu.campus }} | {{ edu.degree }} | {{ edu.year }}</p>
+          <p>{{ edu.description }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
