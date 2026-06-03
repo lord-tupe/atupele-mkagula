@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-{% include head.html %}
-<body>
-  {% include loader.html %}
-  {% include cursor.html %}
-  {% include scroll-top.html %}
-  {% include theme-nav.html %}
-  {% include header.html %}
-  {{ content }}
+<head>
+  {% include head.html %}
+</head>
+<body class="dark-mode">
+  <div class="scroll-progress-bar" aria-hidden="true"></div>
+  <div id="cursor" aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+  
+  <div class="loader" id="loader">
+    <div class="loader-text">Loading Experience</div>
+    <div class="loader-bar"><div class="loader-bar-inner"></div></div>
+  </div>
+
+  {% include nav.html %}
+  {% include mobile-menu.html %}
+
+  <main>
+    {{ content }}
+  </main>
+
   {% include footer.html %}
-  {% include scripts.html %}
+
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 </html>
