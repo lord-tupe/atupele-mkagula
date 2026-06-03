@@ -1,0 +1,22 @@
+items:
+  - role: "Customer Support Agent"
+    company: "betPawa"
+    period: "2025 - Present"
+    description: "Deliver multi-channel support for Sportsbook, Casino and Virtual Sports platforms. Maintain 75%+ First Contact Resolution on account and OTP issues. Troubleshoot front-end technical issues including UI flows, payment gateways, and session handling."
+    accent: "#4fc3f7"
+    icon: "fa-solid fa-bullseye"
+    tags: ["Front-End Debugging", "User Experience", "Technical Communication"]
+  - role: "IT Consultant & Freelancer"
+    company: "Self-Employed"
+    period: "2020 - Present"
+    description: "Computer diagnostics, front-end support, cybersecurity basics, and digital literacy training. Help clients optimize workflows, secure their digital presence, and troubleshoot hardware and software issues."
+    accent: "#ffab40"
+    icon: "fa-solid fa-laptop-code"
+    tags: ["System Diagnostics", "HTML/CSS Support", "Security Awareness"]
+  - role: "Credit Officer"
+    company: "Yellow Solar Africa"
+    period: "2024 - 2025"
+    description: "Managed customer portfolios with focus on digital repayment systems. Conducted risk assessments using data-driven front-end reporting tools. Maintained under 9-hour response SLA using ticketing and CRM interfaces."
+    accent: "#b388ff"
+    icon: "fa-solid fa-coins"
+    tags: ["Digital Systems", "Risk Assessment", "CRM Tools"]
