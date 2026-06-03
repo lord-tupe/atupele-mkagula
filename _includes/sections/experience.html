@@ -1,0 +1,23 @@
+<section class="section skills-section story-chapter" id="experience">
+  <div class="section-inner">
+    <div class="section-label fade-in"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Experience</div>
+    <h2 class="section-title fade-in fade-in-delay-1">Professional Journey</h2>
+    <p class="section-description fade-in fade-in-delay-2">Real-world experience delivering secure, user-focused technology solutions.</p>
+    <div class="skills-grid">
+      {% for job in site.data.experience.items %}
+        {% assign delay_class = "" %}
+        {% if forloop.index == 2 %}{% assign delay_class = "fade-in-delay-1" %}{% endif %}
+        {% if forloop.index == 3 %}{% assign delay_class = "fade-in-delay-2" %}{% endif %}
+        <div class="glass-card skill-card fade-in {{ delay_class }}" style="--card-accent: {{ job.accent }};">
+          <div class="skill-icon" style="background:{{ job.accent }}1A; color:{{ job.accent }};" aria-hidden="true"><i class="{{ job.icon }}"></i></div>
+          <h3>{{ job.role }}</h3>
+          <p class="meta-text">{{ job.company }} | {{ job.period }}</p>
+          <p>{{ job.description }}</p>
+          <div class="skill-tags">
+            {% for tag in job.tags %}<span class="skill-tag">{{ tag }}</span>{% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
