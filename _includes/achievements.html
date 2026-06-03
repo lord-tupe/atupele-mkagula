@@ -1,0 +1,21 @@
+<section class="section thought-section story-chapter" id="achievements">
+  <div class="section-inner">
+    <div class="section-label fade-in"><i class="fa-solid fa-trophy" aria-hidden="true"></i> Achievements</div>
+    <h2 class="section-title fade-in fade-in-delay-1">Key Wins</h2>
+    <p class="section-description fade-in fade-in-delay-2">Measurable impact and recognition for technical excellence and client empowerment.</p>
+    <div class="thought-grid">
+      {% for ach in site.data.achievements.items %}
+        {% assign delay_class = "" %}
+        {% if forloop.index == 2 %}{% assign delay_class = "fade-in-delay-1" %}{% endif %}
+        {% if forloop.index == 3 %}{% assign delay_class = "fade-in-delay-2" %}{% endif %}
+        {% if forloop.index == 4 %}{% assign delay_class = "fade-in-delay-3" %}{% endif %}
+        <div class="glass-card thought-card fade-in {{ delay_class }}">
+          <div class="thought-date">{{ ach.date }}</div>
+          <h3>{{ ach.title }}</h3>
+          <p>{{ ach.description }}</p>
+          <div class="read-more">Quality Focus <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
