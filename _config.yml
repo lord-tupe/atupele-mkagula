@@ -1,8 +1,16 @@
-title: Atupele Nathan Mkagula
-description: Cybersecurity & IT Consultant Portfolio
-baseurl: ""
-url: ""
+title: "Atupele Nathan Mkagula"
+description: "Secure Digital Systems • Front-End Development • Cybersecurity"
+url: "" # Update with your deployed URL (e.g., https://atupele.mkagula.com)
+baseurl: "" 
+
 markdown: kramdown
-sass:
-  sass_dir: assets/css/_sass
-  style: compressed
+exclude: 
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - README.md
+  - admin/config.yml
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
